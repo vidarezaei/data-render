@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Electronics",
+        "subcategories": [
+            { "id": 11, "name": "Mobile Phones" },
+            { "id": 12, "name": "Laptops" }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Home Appliances",
+        "subcategories": [
+            { "id": 21, "name": "Refrigerators" },
+            { "id": 22, "name": "Microwaves" }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Home Appliances",
+        "subcategories": [
+            { "id": 21, "name": "Refrigerators" },
+            { "id": 22, "name": "Microwaves" }
+        ]
+    }
+]
