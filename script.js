@@ -18,5 +18,5 @@ container.appendChild(ul);
 })
 }).catch(error => {
     console.error("Error:", error);
-    container.textContent = "Failed to load data.";
+    container.textContent = "Failed!!";
 });
