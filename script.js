@@ -3,8 +3,16 @@ fetch("data.json").then(response => {if (!response.ok) {throw new Error("failed 
 ).then(data =>{ 
     data.forEach(item => 
 {
+    // const ul=document.createElement("ul");
+    // ul.innerHTML=`<li>${item.id}</li> <li>${item.name}</li>`;
+
+
+    const li1=createFnode("li",item.id);
+    const li2=createFnode("li",item.name);
     const ul=document.createElement("ul");
-    ul.innerHTML=`<li>${item.id}</li> <li>${item.name}</li>`;
+    ul.append(li1,li2);
+
+
     const subul=document.createElement("ul");
     item.subcategories.forEach(subitem =>
         {   
