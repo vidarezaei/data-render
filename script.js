@@ -7,9 +7,13 @@ fetch("data.json").then(response => {if (!response.ok) {throw new Error("failed 
     ul.innerHTML=`<li>${item.id}</li> <li>${item.name}</li>`;
     const subul=document.createElement("ul");
     item.subcategories.forEach(subitem =>
-        {   const subitems=document.createElement("li");
-            subitems.textContent=`${subitem.id} : ${subitem.name}`; 
-            subul.appendChild(subitems);
+        {   
+            // const subitems=document.createElement("li");
+            // subitems.textContent=`${subitem.id} : ${subitem.name}`; 
+            // subul.appendChild(subitems);
+
+
+            subul.appendChild(createFnode("li",`${subitem.id} : ${subitem.name}`));
         } 
         
     )
@@ -20,3 +24,10 @@ container.appendChild(ul);
     console.error("Error:", error);
     container.textContent = "Failed!!";
 });
+
+
+function createFnode(element,value){
+    let finalElement=document.createElement(element);
+    finalElement.textContent=value;
+    return finalElement;
+}
