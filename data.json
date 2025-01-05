@@ -1,26 +1,162 @@
 [
     {
-        "id": 1,
-        "name": "Electronics",
-        "subcategories": [
-            { "id": 11, "name": "Mobile Phones" },
-            { "id": 12, "name": "Laptops" }
-        ]
+      "id": 1,
+      "name": "Technology",
+      "subCategories": [
+        {
+          "id": 11,
+          "name": "Software",
+          "subCategories": [
+            {
+              "id": 111,
+              "name": "Web Development",
+              "subCategories": [
+                { "id": 1111, "name": "Frontend" },
+                { "id": 1112, "name": "Backend" },
+                {
+                  "id": 1113,
+                  "name": "Full Stack",
+                  "subCategories": [
+                    { "id": 11131, "name": "React" },
+                    { "id": 11132, "name": "Node.js" }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 112,
+              "name": "Mobile Development",
+              "subCategories": [
+                { "id": 1121, "name": "iOS" },
+                { "id": 1122, "name": "Android" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "name": "Hardware",
+          "subCategories": [
+            {
+              "id": 121,
+              "name": "Laptops",
+              "subCategories": [
+                { "id": 1211, "name": "MacBook" },
+                { "id": 1212, "name": "Windows Laptops" }
+              ]
+            },
+            {
+              "id": 122,
+              "name": "Smartphones",
+              "subCategories": [
+                { "id": 1221, "name": "iPhone" },
+                { "id": 1222, "name": "Android Phones" }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
-        "id": 2,
-        "name": "Home Appliances",
-        "subcategories": [
-            { "id": 21, "name": "Refrigerators" },
-            { "id": 22, "name": "Microwaves" }
-        ]
+      "id": 2,
+      "name": "Health & Fitness",
+      "subCategories": [
+        {
+          "id": 21,
+          "name": "Nutrition",
+          "subCategories": [
+            {
+              "id": 211,
+              "name": "Vitamins & Supplements",
+              "subCategories": [
+                { "id": 2111, "name": "Multivitamins" },
+                { "id": 2112, "name": "Protein Supplements" }
+              ]
+            },
+            {
+              "id": 212,
+              "name": "Healthy Recipes",
+              "subCategories": [
+                { "id": 2121, "name": "Breakfast" },
+                { "id": 2122, "name": "Lunch" },
+                { "id": 2123, "name": "Dinner" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "Exercise",
+          "subCategories": [
+            {
+              "id": 221,
+              "name": "Cardio",
+              "subCategories": [
+                { "id": 2211, "name": "Running" },
+                { "id": 2212, "name": "Cycling" }
+              ]
+            },
+            {
+              "id": 222,
+              "name": "Strength Training",
+              "subCategories": [
+                { "id": 2221, "name": "Weightlifting" },
+                { "id": 2222, "name": "Bodyweight Exercises" }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
-        "id": 3,
-        "name": "Home Appliances",
-        "subcategories": [
-            { "id": 31, "name": "Refrigerators" },
-            { "id": 32, "name": "Microwaves" }
-        ]
+      "id": 3,
+      "name": "Entertainment",
+      "subCategories": [
+        {
+          "id": 31,
+          "name": "Movies",
+          "subCategories": [
+            {
+              "id": 311,
+              "name": "Action",
+              "subCategories": [
+                { "id": 3111, "name": "Superhero" },
+                { "id": 3112, "name": "Thriller" }
+              ]
+            },
+            {
+              "id": 312,
+              "name": "Comedy",
+              "subCategories": [
+                { "id": 3121, "name": "Sitcoms" },
+                { "id": 3122, "name": "Stand-up Comedy" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "name": "Music",
+          "subCategories": [
+            {
+              "id": 321,
+              "name": "Rock",
+              "subCategories": [
+                { "id": 3211, "name": "Classic Rock" },
+                { "id": 3212, "name": "Indie Rock" }
+              ]
+            },
+            {
+              "id": 322,
+              "name": "Pop",
+              "subCategories": [
+                { "id": 3221, "name": "Top 40" },
+                { "id": 3222, "name": "Electropop" }
+              ]
+            }
+          ]
+        }
+      ]
     }
-]
+  ]
+  

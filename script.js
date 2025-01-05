@@ -1,41 +1,66 @@
-const container=document.getElementById("container");
-fetch("data.json").then(response => {if (!response.ok) {throw new Error("failed to load");} return response.json(); }
-).then(data =>{ 
-    data.forEach(item => 
-{
-    // const ul=document.createElement("ul");
-    // ul.innerHTML=`<li>${item.id}</li> <li>${item.name}</li>`;
 
-
-    const li1=createFnode("li",item.id);
-    const li2=createFnode("li",item.name);
-    const ul=document.createElement("ul");
-    ul.append(li1,li2);
-
-
-    const subul=document.createElement("ul");
-    item.subcategories.forEach(subitem =>
-        {   
-            // const subitems=document.createElement("li");
-            // subitems.textContent=`${subitem.id} : ${subitem.name}`; 
-            // subul.appendChild(subitems);
-
-
-            subul.appendChild(createFnode("li",`${subitem.id} : ${subitem.name}`));
-        } 
+fetch('./data.json')
+  .then(response => response.json())
+  .then(data => {
+    const cat =data;
+    const container=document.getElementById("container");
+    container.append(printCat(data));
+    
+    
+    
+ 
+    
+    
+    
+    
+    function createFnode(element,value){
+        let finalElement=document.createElement(element);
+        finalElement.textContent=value;
+        return finalElement;
+    }
+    
+    
+    
+    function printCat(cat){
+        let ul=document.createElement("ul");
+    if(cat && cat.length>0){
+     
+        cat.forEach(item =>{
+                let li1=createFnode("li",item.id);
+                let li2=createFnode("li",item.name);
+                ul.append(li1,li2);
+                if(item.subCategories && item.subCategories.length>0){
+                    let subcat=printCat(item.subCategories);
+                    let li3=document.createElement("li") ; 
+                    li3.append(subcat);
+                    ul.append(li3);
+                }
+            } );
         
-    )
-ul.appendChild(subul);
-container.appendChild(ul);
-})
-}).catch(error => {
-    console.error("Error:", error);
-    container.textContent = "Failed!!";
-});
+    }
+    return ul;
+    }
 
 
-function createFnode(element,value){
-    let finalElement=document.createElement(element);
-    finalElement.textContent=value;
-    return finalElement;
-}
+
+
+
+
+
+
+
+
+
+
+  })
+  .catch(error => {
+    console.error('Error loading JSON:', error);
+  });
+
+
+
+
+
+ 
+
+
