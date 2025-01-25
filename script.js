@@ -13,7 +13,7 @@ fetch('./data.json')
     
     
     
-    function createFnode(element,value){
+    function createNode(element,value){
         let finalElement=document.createElement(element);
         finalElement.textContent=value;
         return finalElement;
@@ -26,14 +26,14 @@ fetch('./data.json')
     if(cat && cat.length>0){
      
         cat.forEach(item =>{
-                let li1=createFnode("li",item.id);
-                let li2=createFnode("li",item.name);
-                ul.append(li1,li2);
+                let elementId=createNode("li",item.id);
+                let elementName=createNode("li",item.name);
+                ul.append(elementId,elementName);
                 if(item.subCategories && item.subCategories.length>0){
                     let subcat=printCat(item.subCategories);
-                    let li3=document.createElement("li") ; 
-                    li3.append(subcat);
-                    ul.append(li3);
+                    let elementSubCat=document.createElement("li") ; 
+                    elementSubCat.append(subcat);
+                    ul.append(elementSubCat);
                 }
             } );
         
