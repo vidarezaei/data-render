@@ -1,10 +1,12 @@
 class CategoryRenderer {
-  constructor(containerId) {
+  constructor(containerId, data) {
       this.container = document.getElementById(containerId);
+      this.data = data
   }
 
+
   showPrintCat() {
-      fetch('./data.json')
+      fetch(this.data)
           .then(response => response.json())
           .then(data => {
               this.container.append(this.printCat(data));
@@ -41,5 +43,5 @@ class CategoryRenderer {
 }
 
 
-const categoryRenderer = new CategoryRenderer("container");
+const categoryRenderer = new CategoryRenderer("container","./data.json");
 categoryRenderer.showPrintCat();
